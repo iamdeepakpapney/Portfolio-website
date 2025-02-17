@@ -1,101 +1,110 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { FaGithub, FaInstagram, FaLinkedin, FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import Link from 'next/link';
+
+const LandingPage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+    <div className="relative min-h-screen bg-gradient-to-r from-blue-600 via-purple-700 to-pink-600 text-white px-6 overflow-hidden">
+      
+      {/* Sidebar for Get in Touch */}
+      <div className="fixed left-0 top-1/3 transform -translate-y-1/2 w-16 bg-gradient-to-b from-teal-500 to-teal-700 p-4 rounded-r-lg shadow-xl transition-all duration-300 hover:w-48 hover:shadow-2xl">
+        <div className="flex flex-col gap-8 items-center text-lg">
+          <a href="tel:+918979646025">
+            <FaPhone className="cursor-pointer hover:text-white transition-all" title="Call Me" />
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="mailto:deepakpapney111@gmail.com">
+            <FaEnvelope className="cursor-pointer hover:text-white transition-all" title="Email Me" />
+          </a>
+          <a href="https://wa.me/8979646025" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp className="cursor-pointer hover:text-white transition-all" title="WhatsApp Me" />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+      </div>
+
+      {/* Main Content */}
+      <header className="flex flex-col justify-center items-center text-center space-y-6 mt-40 sm:mt-40">
+        
+        {/* Profile Image */}
+        <a href="/images/myimage.jpeg" target="_blank">
+          <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-2xl transform transition-transform duration-500 ease-in-out hover:scale-110">
+            <img
+              src="/images/myimage.jpeg"
+              alt="Profile Image"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+
+        {/* Name and Title */}
+        <div className="space-y-4 sm:space-y-6">
+          <h1 className="text-4xl font-bold tracking-wide mb-4 sm:mb-6 text-shadow-md animate__animated animate__fadeIn animate__delay-1s">
+            Hi, I'm Deepak Papney 👋
+          </h1>
+          <p className="text-lg sm:text-xl mb-8 max-w-3xl mx-auto px-4">
+            Highly skilled Frontend Developer with 3+ years of experience in building and deploying mobile and web applications. 
+            <Link href="/about" className="underline text-teal-400"> Learn more about me</Link>.
+          </p>
+        </div>
+
+        {/* Action Links */}
+        <div className="flex gap-6 justify-center">
+          <Link href="/about" className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg shadow-lg transform transition-transform hover:scale-105">
+            About Me
+          </Link>
+          <Link href="/projects" className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg shadow-lg transform transition-transform hover:scale-105">
+           Projects
+          </Link>
+        </div>
+
+        {/* Download Resume Button */}
+        <a href="/pdf/resume.pdf" download>
+          <button className="px-6 py-3 mt-8 bg-teal-500 text-white rounded-lg shadow-xl hover:bg-teal-600 transition-all transform hover:scale-105">
+            Download Resume
+          </button>
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* Social Media Icons */}
+      <footer className="absolute bottom-0 left-0 right-0 py-6 bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 text-white text-3xl">
+        <div className="flex justify-center gap-8">
+          <a href="https://github.com/deepakpapney" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="social-icon transition-transform transform hover:scale-125 hover:text-yellow-400" />
+          </a>
+          <a href="https://www.linkedin.com/in/deepak-papney" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="social-icon transition-transform transform hover:scale-125 hover:text-blue-500" />
+          </a>
+          <a href="https://www.instagram.com/iamdeepakpapney" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="social-icon transition-transform transform hover:scale-125 hover:text-pink-400" />
+          </a>
+        </div>
       </footer>
+
+      {/* Styling */}
+      <style jsx global>{`
+        .social-icon {
+          font-size: 2.5rem;
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .transform {
+          transition: transform 0.3s ease;
+        }
+
+        .hover:scale-110 {
+          transform: scale(1.1);
+        }
+
+        .shadow-2xl {
+          box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.15), -12px -12px 24px rgba(255, 255, 255, 0.1);
+        }
+
+        .shadow-lg {
+          box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(255, 255, 255, 0.1);
+        }
+      `}</style>
     </div>
   );
-}
+};
+
+export default LandingPage;

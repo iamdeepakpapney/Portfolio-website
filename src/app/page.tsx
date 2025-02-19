@@ -2,7 +2,7 @@
 
 import { FaGithub, FaInstagram, FaLinkedin, FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
-
+import Image from 'next/image';
 const LandingPage = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-r from-blue-600 via-purple-700 to-pink-600 text-white px-6 overflow-hidden">
@@ -28,10 +28,11 @@ const LandingPage = () => {
         {/* Profile Image */}
         <a href="/images/myimage.jpeg" target="_blank">
           <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-2xl transform transition-transform duration-500 ease-in-out hover:scale-110">
-            <img
+            <Image
               src="/images/myimage.jpeg"
               alt="Profile Image"
               className="w-full h-full object-cover"
+              fill
             />
           </div>
         </a>
@@ -39,7 +40,7 @@ const LandingPage = () => {
         {/* Name and Title */}
         <div className="space-y-4 sm:space-y-6">
           <h1 className="text-4xl font-bold tracking-wide mb-4 sm:mb-6 text-shadow-md animate__animated animate__fadeIn animate__delay-1s">
-            Hi, I'm Deepak Papney 👋
+            Hi, I&apos;m Deepak Papney 👋
           </h1>
           <p className="text-lg sm:text-xl mb-8 max-w-3xl mx-auto px-4">
             Highly skilled Frontend Developer with 3+ years of experience in building and deploying mobile and web applications. 

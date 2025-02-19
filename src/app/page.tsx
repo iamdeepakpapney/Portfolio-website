@@ -70,7 +70,7 @@ const LandingPage = () => {
       {/* Social Media Icons */}
       <footer className="absolute bottom-0 left-0 right-0 py-6 bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 text-white text-3xl">
         <div className="flex justify-center gap-8">
-          <a href="https://github.com/deepakpapney" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/iamdeepakpapney" target="_blank" rel="noopener noreferrer">
             <FaGithub className="social-icon transition-transform transform hover:scale-125 hover:text-yellow-400" />
           </a>
           <a href="https://www.linkedin.com/in/deepak-papney" target="_blank" rel="noopener noreferrer">

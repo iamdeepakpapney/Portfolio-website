@@ -129,7 +129,7 @@ const ProjectsPage = () => {
 
         <h1 className="text-4xl font-bold tracking-wide mb-8 text-center sm:text-left">My Projects</h1>
 
-        {projects.map((project, index) => (
+        {projects.map((project, index) => ( 
           <div key={index} className="bg-gray-800 text-white p-6 rounded-lg shadow-lg mb-6 transition-transform transform hover:scale-105">
             <h2 className="text-2xl font-bold mb-2 text-teal-400">{project.name}</h2>
             <p className="text-lg text-gray-300 mb-4">{project.shortDesc}</p>

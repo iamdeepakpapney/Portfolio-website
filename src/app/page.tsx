@@ -6,7 +6,8 @@ import Image from 'next/image';
 
 const LandingPage = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-r from-blue-600 via-purple-700 to-pink-600 text-white px-6 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-r from-blue-600 via-purple-700 to-pink-600 text-white px-6 pb-24 overflow-hidden">
+
       {/* Sidebar for Get in Touch */}
       <div className="fixed left-0 top-1/3 transform -translate-y-1/2 w-16 sm:hover:w-48 sm:w-16 bg-gradient-to-b from-teal-500 to-teal-700 p-4 rounded-r-lg shadow-xl transition-all duration-300 z-10 sm:z-50">
         <div className="flex flex-col gap-8 items-center text-lg">
@@ -23,7 +24,8 @@ const LandingPage = () => {
       </div>
 
       {/* Main Content */}
-      <header className="relative flex flex-col justify-center items-center text-center space-y-6 mt-40 sm:mt-40 w-full max-w-screen-lg mx-auto px-4 z-20">
+      <header className="flex flex-col justify-center items-center text-center space-y-6 mt-40 sm:mt-40">
+
         {/* Profile Image */}
         <a href="/images/myimage.jpeg" target="_blank">
           <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-2xl transform transition-transform duration-500 ease-in-out hover:scale-110">
@@ -48,7 +50,7 @@ const LandingPage = () => {
         </div>
 
         {/* Action Links */}
-        <div className="flex flex-wrap gap-6 justify-center">
+        <div className="flex gap-6 justify-center">
           <Link href="/about" className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg shadow-lg transform transition-transform hover:scale-105">
             About Me
           </Link>
@@ -58,17 +60,15 @@ const LandingPage = () => {
         </div>
 
         {/* Download Resume Button */}
-        <div className="w-full flex justify-center sm:justify-center">
-          <a href="/pdf/DeepakPapney_2025.pdf" download>
-            <button className="px-6 py-3 mt-8 bg-teal-500 text-white rounded-lg shadow-xl hover:bg-teal-600 transition-all transform hover:scale-105 w-full sm:w-auto z-20">
-              Download Resume
-            </button>
-          </a>
-        </div>
+        <a href="/pdf/DeepakPapney_2025.pdf" download>
+          <button className="px-6 py-3 mt-8 bg-teal-500 text-white rounded-lg shadow-xl hover:bg-teal-600 transition-all transform hover:scale-105 w-full sm:w-auto">
+            Download Resume
+          </button>
+        </a>
       </header>
 
       {/* Social Media Icons */}
-      <footer className="absolute bottom-0 left-0 right-0 py-6 bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 text-white text-3xl">
+      <footer className="absolute bottom-0 left-0 right-0 py-6 bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 text-white text-3xl z-0">
         <div className="flex justify-center gap-8">
           <a href="https://github.com/iamdeepakpapney" target="_blank" rel="noopener noreferrer">
             <FaGithub className="social-icon transition-transform transform hover:scale-125 hover:text-yellow-400" />
@@ -103,6 +103,12 @@ const LandingPage = () => {
 
         .shadow-lg {
           box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(255, 255, 255, 0.1);
+        }
+
+        @media (min-height: 800px) {
+          header {
+            padding-bottom: 60px;
+          }
         }
       `}</style>
     </div>

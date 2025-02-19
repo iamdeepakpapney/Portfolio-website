@@ -8,19 +8,20 @@ const LandingPage = () => {
     <div className="relative min-h-screen bg-gradient-to-r from-blue-600 via-purple-700 to-pink-600 text-white px-6 overflow-hidden">
       
       {/* Sidebar for Get in Touch */}
-      <div className="fixed left-0 top-1/3 transform -translate-y-1/2 w-16 bg-gradient-to-b from-teal-500 to-teal-700 p-4 rounded-r-lg shadow-xl transition-all duration-300 hover:w-48 hover:shadow-2xl">
-        <div className="flex flex-col gap-8 items-center text-lg">
-          <a href="tel:+918979646025">
-            <FaPhone className="cursor-pointer hover:text-white transition-all" title="Call Me" />
-          </a>
-          <a href="mailto:deepakpapney111@gmail.com">
-            <FaEnvelope className="cursor-pointer hover:text-white transition-all" title="Email Me" />
-          </a>
-          <a href="https://wa.me/8979646025" target="_blank" rel="noopener noreferrer">
-            <FaWhatsapp className="cursor-pointer hover:text-white transition-all" title="WhatsApp Me" />
-          </a>
-        </div>
-      </div>
+      <div className="fixed left-0 top-1/3 transform -translate-y-1/2 w-16 sm:hover:w-48 sm:w-16 bg-gradient-to-b from-teal-500 to-teal-700 p-4 rounded-r-lg shadow-xl transition-all duration-300 z-10 sm:z-50">
+  <div className="flex flex-col gap-8 items-center text-lg">
+    <a href="tel:+918979646025">
+      <FaPhone className="cursor-pointer hover:text-white transition-all" title="Call Me" />
+    </a>
+    <a href="mailto:deepakpapney111@gmail.com">
+      <FaEnvelope className="cursor-pointer hover:text-white transition-all" title="Email Me" />
+    </a>
+    <a href="https://wa.me/+918979646025" target="_blank" rel="noopener noreferrer">
+      <FaWhatsapp className="cursor-pointer hover:text-white transition-all" title="WhatsApp Me" />
+    </a>
+  </div>
+</div>
+
 
       {/* Main Content */}
       <header className="flex flex-col justify-center items-center text-center space-y-6 mt-40 sm:mt-40">
@@ -59,7 +60,7 @@ const LandingPage = () => {
         </div>
 
         {/* Download Resume Button */}
-        <a href="/pdf/resume.pdf" download>
+        <a href="/pdf/DeepakPapney_2025.pdf" download>
           <button className="px-6 py-3 mt-8 bg-teal-500 text-white rounded-lg shadow-xl hover:bg-teal-600 transition-all transform hover:scale-105">
             Download Resume
           </button>

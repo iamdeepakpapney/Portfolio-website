@@ -20,7 +20,7 @@ const AboutPage = () => {
         </p>
 
         <p className="text-lg sm:text-xl">
-          I have successfully developed and launched <strong>50+ live applications</strong>, many of which are available on the Play Store.
+          I have successfully developed and launched <strong>50+ live applications</strong>, many of which are available on the Play Store & App Store.
         </p>
 
         {/* Experience Section */}

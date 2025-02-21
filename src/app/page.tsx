@@ -54,7 +54,7 @@ const LandingPage = () => {
           <Link href="/about" className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg shadow-lg transform transition-transform hover:scale-105">
             About Me
           </Link>
-          <Link href="/projects" className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg shadow-lg transform transition-transform hover:scale-105">
+          <Link href="/game" className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg shadow-lg transform transition-transform hover:scale-105">
             Projects
           </Link>
         </div>
